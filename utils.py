@@ -281,6 +281,8 @@ def updata_A_sycn(A,check_list,node_index,n_neighbors,walk_len,directed,test,thr
                                             shuffle=False)
     scores=test(test_loader,output_AUC=False)
     
+
+    
     delet_index=check_list[scores<thre]
     for i in delet_index:
         A[node_index,i]=0
